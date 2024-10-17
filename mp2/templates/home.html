@@ -1,0 +1,49 @@
+{% extends "index.html" %}
+{% load static %}
+{% block blockName %}
+<center>
+    <div style="display: flex; width:90%; text-align: justify;font-style: italic;font-size: 30px;font-weight: 500;">
+        <img src="https://drive.google.com/u/0/uc?id=1HJwNEVXlf5S8CkOjtXvI5MK0gLMO0sTL&export=download">
+        <p id="descrition">
+            <br><br><br><br><br>
+            Get a Predicted Price for Mobile based on it's features.
+        </p>
+    </div>
+    <div id="howToUse" style="display: none;font-style: italic;font-size: 30px;">
+        Steps to work with Default Dataset:<br>
+        <img src="https://drive.google.com/u/0/uc?id=1AVoSOyi__h3A3rCX_5peHbUDRexKmguo&export=download"><br>
+        Working with Customized Dataset:<br>
+        <img src="https://drive.google.com/u/0/uc?id=1ebhYL7C4pRIlsw_0P-tKDPMnmFNA8_mC&export=download">
+    </div>
+    <div id="redirectors">
+        <button style="font-style: italic;font-size: 20px;border: 0px;background-color: transparent;font-weight: bold;" onclick="change()">How To Use Me</button>
+        <a href="{% url 'form1' %}" id="redirectors">Predict</a>
+        <a href="{% url 'upload' %}" id="redirectors">Upload and Predict</a>
+    </div>
+</center>
+    <script>
+        function change(){
+            if(document.getElementById("howToUse").style.display == "none"){
+                document.getElementById("howToUse").style.display = "block";
+            }else{
+                document.getElementById("howToUse").style.display = "none";
+            }
+        };
+    </script>
+    <style>
+        #redirectors{
+            font-size: 20px;
+            background-color: transparent;
+            text-decoration: none;
+            font-weight: bold;
+            font-style: italic;
+            text-align: center;
+            color: black;
+            padding: 50px;
+        }
+        #description{
+            text-align: justify;
+            width: 80%;
+        }
+    </style>
+{% endblock %}
