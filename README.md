@@ -16,4 +16,3 @@ Steps to run this project
  - Get interacted with the application on Web browser by entering following URL <br>
    `http://127.0.0.1:8000`
 
-## How To Use
